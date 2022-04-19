@@ -7,8 +7,8 @@ export default class Calculator extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      total: 10,
-      next: 10,
+      total: '10',
+      next: '10',
       operation: 'x',
     };
   }
@@ -25,10 +25,12 @@ export default class Calculator extends PureComponent {
   calculateNewData = () => {
     console.log('button clicked');
     console.log(this.state);
+    // call the calculator method with this.state and button
   }
 
   updateNextNumber = () => {
     console.log('number clicked');
+    // update the number to the state.next
   }
 
   render() {
