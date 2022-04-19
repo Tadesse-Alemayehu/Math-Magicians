@@ -1,8 +1,18 @@
 import React, { PureComponent } from 'react';
 import './Calculator.css';
 import Button from './button';
+import calculate from '../logic/calculate';
 
 export default class Calculator extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: 10,
+      next: 10,
+      operation: 'x',
+    };
+  }
+
   /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -12,16 +22,29 @@ export default class Calculator extends PureComponent {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
+  calculateNewData = () => {
+    console.log('button clicked');
+  }
+
+  updateNextNumber = () => {
+    console.log('number clicked');
+  }
+
   render() {
+    console.log(calculate(
+      this.state,
+      '=',
+    ));
+    const { total } = this.state;
     return (
       <div id="Calculator">
         <div id="result">
-          <input type="text" name="result" id="result" value="0" />
+          <input type="text" name="result" id="result" value={total} />
         </div>
         <div id="leftSide">
-          <Button name="AC" />
-          <Button name="+/-" />
-          <Button name="%" />
+          <Button name="AC" buttonName="AC" />
+          <Button name="+/-" buttonName="+/-" />
+          <Button name="%" buttonName="%" />
           <Button name="1" />
           <Button name="2" />
           <Button name="3" />
@@ -35,11 +58,11 @@ export default class Calculator extends PureComponent {
           <Button name="." />
         </div>
         <div id="rightSide">
-          <Button className="divide operator" />
-          <Button className="multiply operator" />
-          <Button className="minus operator" />
-          <Button className="plus operator" />
-          <Button className="equal operator" />
+          <Button className="divide operator" buttonName="÷" />
+          <Button className="multiply operator" buttonName="x" />
+          <Button className="minus operator" buttonName="-" />
+          <Button className="plus operator" buttonName="+" />
+          <Button className="equal operator" buttonName="=" />
         </div>
       </div>
     );
