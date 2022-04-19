@@ -6,9 +6,12 @@ export default class Calculator extends PureComponent {
     return (
       <div id="Calculator">
         <div id="result">
-          <input type="text" name="result" id="result" placeholder="0" />
+          <input type="text" name="result" id="result" value="0" />
         </div>
         <div id="leftSide">
+          <span>A/C</span>
+          <span>+/-</span>
+          <span>%</span>
           <span>1</span>
           <span>2</span>
           <span>3</span>
