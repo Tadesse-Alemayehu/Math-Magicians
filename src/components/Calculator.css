@@ -2,7 +2,6 @@
   --orange: #F5913E;
   --light: #e9e8e8;
   --dark: #858693;
-  border: 2px silver solid;
   max-width: max-content;
   display: grid;
   grid-template-columns: auto auto;
@@ -11,21 +10,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  font-weight:4s00;
 }
 
 #result{
   grid-area: result;
-  text-align: right;
-  background-color: var(--dark);
   color: white;
   font-size: 1.2rem;
+  background-color: transparent;
+  background-color: var(--dark);
 }
-#result input{
+#result input{text-align: right;
   height: 100%;
-  width: 100%;
-  margin: 0;
+  width: 95%;
   padding: 0;
   outline: none;
+  display: block;
+  margin: auto;
+  border: 0;
+  padding: 5px;
 }
 
 #leftSide{
@@ -55,4 +58,21 @@ grid-row: 5;
 }
 #Calculator * {
 border: 0.1px rgb(255, 255, 255) solid;
+}
+.operator{
+background-size: 15px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.plus {
+  background-image: url('../img/plus-solid.svg');
+}.divide {
+  background-image: url('../img/divide-solid.svg');
+}.minus {
+  background-image: url('../img/minus-solid.svg');
+}.multiply {
+  background-image: url('../img/plus-solid.svg');
+}.equal {
+  background-image: url('../img//equals-solid.svg');
 }
