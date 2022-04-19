@@ -1,7 +1,8 @@
-#Calculator{
-  --orange: #F5913E;
+#Calculator {
+  --orange: #f5913e;
   --light: #e9e8e8;
   --dark: #858693;
+
   max-width: max-content;
   display: grid;
   grid-template-columns: auto auto;
@@ -9,21 +10,22 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  font-weight:4s00;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
 }
 
-#result{
+#result {
   grid-area: result;
   color: white;
   font-size: 1.2rem;
   background-color: transparent;
   background-color: var(--dark);
 }
-#result input{text-align: right;
+
+#result input {
+  text-align: right;
   height: 100%;
   width: 95%;
-  padding: 0;
   outline: none;
   display: block;
   margin: auto;
@@ -31,48 +33,61 @@
   padding: 5px;
 }
 
-#leftSide{
+#leftSide {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-areas: 'zero zero';
   background-color: var(--light);
 }
-#rightSide{
+
+#rightSide {
   display: grid;
   grid-template-columns: auto;
   background-color: var(--orange);
 }
-span{
+
+span {
   padding: 1vw 3vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#rightSide span{
+
+#rightSide span {
   padding: 1vw 5vw;
 }
-.zero{
-grid-area: zero;
-grid-row: 5;
+
+.zero {
+  grid-area: zero;
+  grid-row: 5;
 }
+
 #Calculator * {
-border: 0.1px rgb(255, 255, 255) solid;
+  border: 0.1px rgb(255, 255, 255) solid;
 }
-.operator{
-background-size: 15px;
-background-repeat: no-repeat;
-background-position: center;
+
+.operator {
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .plus {
   background-image: url('../img/plus-solid.svg');
-}.divide {
+}
+
+.divide {
   background-image: url('../img/divide-solid.svg');
-}.minus {
+}
+
+.minus {
   background-image: url('../img/minus-solid.svg');
-}.multiply {
+}
+
+.multiply {
   background-image: url('../img/plus-solid.svg');
-}.equal {
+}
+
+.equal {
   background-image: url('../img//equals-solid.svg');
 }
