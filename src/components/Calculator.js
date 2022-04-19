@@ -25,11 +25,11 @@ export default class Calculator extends PureComponent {
           <span>.</span>
         </div>
         <div id="rightSide">
-          <span>/</span>
-          <span>*</span>
-          <span>-</span>
-          <span>+</span>
-          <span>=</span>
+          <span className="divide operator" />
+          <span className="multiply operator" />
+          <span className="minus operator" />
+          <span className="plus operator" />
+          <span className="equal operator" />
         </div>
       </div>
     );
