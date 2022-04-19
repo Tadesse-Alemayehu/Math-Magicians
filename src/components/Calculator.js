@@ -24,6 +24,7 @@ export default class Calculator extends PureComponent {
  */
   calculateNewData = () => {
     console.log('button clicked');
+    console.log(this.state);
   }
 
   updateNextNumber = () => {
@@ -35,6 +36,7 @@ export default class Calculator extends PureComponent {
       this.state,
       '=',
     ));
+    this.calculateNewData();
     const { total } = this.state;
     return (
       <div id="Calculator">
