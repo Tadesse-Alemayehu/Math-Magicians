@@ -51,6 +51,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 
 #rightSide button {
@@ -70,24 +71,4 @@ button {
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.plus {
-  background-image: url('../img/plus-solid.svg');
-}
-
-.divide {
-  background-image: url('../img/divide-solid.svg');
-}
-
-.minus {
-  background-image: url('../img/minus-solid.svg');
-}
-
-.multiply {
-  background-image: url('../img/xmark-solid.svg');
-}
-
-.equal {
-  background-image: url('../img//equals-solid.svg');
 }
