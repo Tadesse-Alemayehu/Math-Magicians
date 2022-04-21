@@ -74,10 +74,10 @@ export default function Calculator() {
       },
       event.target.textContent,
     );
-    setTotal(newData.total);
+    setTotal(newData.total || 0);
     setNext(0);
     setOperation(event.target.textContent);
-    setResult(newData.total + event.target.textContent);
+    setResult((newData.total || '0') + event.target.textContent);
     // this.setState(() => ({
     //   total: newData.total,
     //   next: 0,
