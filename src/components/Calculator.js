@@ -16,10 +16,6 @@ export default function Calculator() {
     setResult(0);
   }, []);
 
-  useEffect(() => {
-    console.log('new data is', [total, next, operation, result]);
-  });
-
   const calculateNewData = (event) => {
     const newData = calculate({ total, next, operation }, event.target.textContent);
     setTotal(newData.total || 0);
