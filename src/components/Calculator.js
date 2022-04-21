@@ -34,12 +34,6 @@ export default function Calculator() {
     setOperation(newData.operation || '');
     setResult(newData.total || newData.next || 0);
 
-    // this.setState(() => ({
-    //   total: newData.total || 0,
-    //   next: newData.next || 0,
-    //   operation: newData.operation || '',
-    //   result: newData.total || newData.next || 0,
-    // }));
   };
 
   const updateNextNumber = (event) => {
@@ -47,22 +41,9 @@ export default function Calculator() {
       ? event.target.textContent : result + event.target.textContent;
     const nextNumber = next === 0
       ? event.target.textContent : next + event.target.textContent;
-    // setTotal(newData.total || 0);
     setNext(nextNumber);
-    // setOperation(newData.operation || '');
     setResult(newResult);
-    // this.setState((state) => {
-    //   const result = state.result === 0
-    //     ? event.target.textContent : state.result + event.target.textContent;
-    //   const nextNumber = state.next === 0
-    //     ? event.target.textContent : state.next + event.target.textContent;
-    //   return {
-    //     total: state.total,
-    //     next: nextNumber,
-    //     operation: state.operation,
-    //     result,
-    //   };
-    // });
+
   };
 
   const updateOperator = (event) => {
@@ -78,12 +59,6 @@ export default function Calculator() {
     setNext(0);
     setOperation(event.target.textContent);
     setResult((newData.total || '0') + event.target.textContent);
-    // this.setState(() => ({
-    //   total: newData.total,
-    //   next: 0,
-    //   operation: event.target.textContent,
-    //   result: newData.total + event.target.textContent,
-    // }));
   };
 
   return (
