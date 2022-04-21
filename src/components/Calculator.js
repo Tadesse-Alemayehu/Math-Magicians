@@ -4,13 +4,20 @@ import Button from './button';
 import calculate from '../logic/calculate';
 
 export default class Calculator extends PureComponent {
+  buttonName = null;
+
   constructor(props) {
     super(props);
     this.state = {
-      total: '10',
-      next: '10',
-      operation: 'x',
+      total: 0,
+      next: 0,
+      operation: '',
     };
+  }
+
+  componentDidMount() {
+    console.log('component is mounted');
+    this.buttonName = 'AC';
   }
 
   /**
@@ -22,23 +29,40 @@ export default class Calculator extends PureComponent {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-  calculateNewData = () => {
-    console.log('button clicked');
+  calculateNewData = (event) => {
+    console.log(event.target.textContent);
+    const newData = calculate(
+      this.state,
+      event.target.textContent,
+    );
+    console.log(newData);
+    // console.log(this.state);
+    // this.setState(newData);
     // console.log(this.state);
     // call the calculator method with this.state and button
   }
 
-  updateNextNumber = () => {
-    console.log('number clicked');
-    // update the number to the state.next
+  updateNextNumber = (event) => {
+    this.setState((state) => ({
+      total: state.total,
+      next: state.next + event.target.textContent,
+      operation: state.operation,
+    }));
+
+    console.log('new state is', this.state);
+  }
+
+  updateOperator = (event) => {
+    // console.log(event.target);
+    this.setState((state) => ({
+      total: state.total,
+      next: state.next,
+      operation: event.target.textContent,
+    }));
+    console.log('new state is', this.state);
   }
 
   render() {
-    console.log(calculate(
-      this.state,
-      '=',
-    ));
-    this.calculateNewData();
     const { total } = this.state;
     return (
       <div id="Calculator">
@@ -48,7 +72,7 @@ export default class Calculator extends PureComponent {
         <div id="leftSide">
           <Button value="AC" buttonName="AC" clickCallback={this.calculateNewData} />
           <Button value="+/-" buttonName="+/-" clickCallback={this.calculateNewData} />
-          <Button value="%" buttonName="%" clickCallback={this.calculateNewData} />
+          <Button value="%" buttonName="%" clickCallback={this.updateOperator} />
           <Button value="1" clickCallback={this.updateNextNumber} />
           <Button value="2" clickCallback={this.updateNextNumber} />
           <Button value="3" clickCallback={this.updateNextNumber} />
@@ -62,11 +86,11 @@ export default class Calculator extends PureComponent {
           <Button value="." clickCallback={this.updateNextNumber} />
         </div>
         <div id="rightSide">
-          <Button className="divide operator" buttonName="÷" clickCallback={this.calculateNewData} />
-          <Button className="multiply operator" buttonName="x" clickCallback={this.calculateNewData} />
-          <Button className="minus operator" buttonName="-" clickCallback={this.calculateNewData} />
-          <Button className="plus operator" buttonName="+" clickCallback={this.calculateNewData} />
-          <Button className="equal operator" buttonName="=" clickCallback={this.calculateNewData} />
+          <Button className="divide operator" value="÷" clickCallback={this.updateOperator} />
+          <Button className="multiply operator" value="x" clickCallback={this.updateOperator} />
+          <Button className="minus operator" value="-" clickCallback={this.updateOperator} />
+          <Button className="plus operator" value="+" clickCallback={this.updateOperator} />
+          <Button className="equal operator" value="=" clickCallback={this.calculateNewData} />
         </div>
       </div>
     );
