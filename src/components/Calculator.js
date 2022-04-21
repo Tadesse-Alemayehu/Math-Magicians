@@ -20,6 +20,9 @@ export default class Calculator extends PureComponent {
     this.buttonName = 'AC';
   }
 
+  componentDidUpdate() {
+    console.log('new data is', this.state);
+  }
   /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -29,16 +32,20 @@ export default class Calculator extends PureComponent {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
+
   calculateNewData = (event) => {
-    console.log(event.target.textContent);
+    // console.log(event.target.textContent);
     const newData = calculate(
       this.state,
       event.target.textContent,
     );
-    console.log(newData);
     // console.log(this.state);
-    // this.setState(newData);
-    // console.log(this.state);
+    this.setState(() => ({
+      total: newData.total || 0,
+      next: newData.next || 0,
+      operation: newData.operation || '',
+    }));
+    // console.log('new state is', this.state);
     // call the calculator method with this.state and button
   }
 
@@ -49,7 +56,7 @@ export default class Calculator extends PureComponent {
       operation: state.operation,
     }));
 
-    console.log('new state is', this.state);
+    // console.log('new state is', this.state);
   }
 
   updateOperator = (event) => {

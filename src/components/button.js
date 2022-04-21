@@ -8,7 +8,7 @@ export default class Button extends PureComponent {
   render() {
     const { value, className, clickCallback } = this.props;
     return (
-      <button type="submit" className={className} onClick={clickCallback} name={value}>{value}</button>
+      <button type="button" className={className} onClick={clickCallback} name={value}>{value}</button>
     );
   }
 }
