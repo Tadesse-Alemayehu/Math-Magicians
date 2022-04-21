@@ -44,9 +44,11 @@ export default class Calculator extends PureComponent {
     this.setState((state) => {
       const result = state.result === 0
         ? event.target.textContent : state.result + event.target.textContent;
+      const nextNumber = state.next === 0
+        ? event.target.textContent : state.next + event.target.textContent;
       return {
         total: state.total,
-        next: state.next + event.target.textContent,
+        next: nextNumber,
         operation: state.operation,
         result,
       };
