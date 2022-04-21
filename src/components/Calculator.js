@@ -66,17 +66,21 @@ export default function Calculator() {
     // });
   }
 
-  updateOperator = (event) => {
+  const updateOperator = (event) => {
     const newData = calculate(
       this.state,
       event.target.textContent,
     );
-    this.setState(() => ({
-      total: newData.total,
-      next: 0,
-      operation: event.target.textContent,
-      result: newData.total + event.target.textContent,
-    }));
+    setTotal(newData.total);
+    setNext(0);
+    setOperation(event.target.textContent);
+    setResult(newData.total + event.target.textContent);
+    // this.setState(() => ({
+    //   total: newData.total,
+    //   next: 0,
+    //   operation: event.target.textContent,
+    //   result: newData.total + event.target.textContent,
+    // }));
   }
 
   render() {
