@@ -4,10 +4,10 @@ import Button from './button';
 import calculate from '../logic/calculate';
 
 export default function Calculator() {
-  const [total, setTotal] = useState(null)
-  const [next, setNext] = useState(null)
-  const [operation, setOperation] = useState(null)
-  const [result, setResult] = useState(null)
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
+  const [result, setResult] = useState(null);
 
   useEffect(() => {
     setTotal(0);
@@ -40,14 +40,13 @@ export default function Calculator() {
     //   operation: newData.operation || '',
     //   result: newData.total || newData.next || 0,
     // }));
-  }
+  };
 
   const updateNextNumber = (event) => {
-
-    const newResult = state.result === 0
-      ? event.target.textContent : state.result + event.target.textContent;
-    const nextNumber = state.next === 0
-      ? event.target.textContent : state.next + event.target.textContent;
+    const newResult = result === 0
+      ? event.target.textContent : result + event.target.textContent;
+    const nextNumber = next === 0
+      ? event.target.textContent : next + event.target.textContent;
     // setTotal(newData.total || 0);
     setNext(nextNumber);
     // setOperation(newData.operation || '');
@@ -64,7 +63,7 @@ export default function Calculator() {
     //     result,
     //   };
     // });
-  }
+  };
 
   const updateOperator = (event) => {
     const newData = calculate(
@@ -81,8 +80,7 @@ export default function Calculator() {
     //   operation: event.target.textContent,
     //   result: newData.total + event.target.textContent,
     // }));
-  }
-
+  };
 
   return (
     <div id="Calculator">
@@ -114,6 +112,4 @@ export default function Calculator() {
       </div>
     </div>
   );
-
-
-
+}
