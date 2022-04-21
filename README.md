@@ -1,13 +1,13 @@
-# Leaderboard
+# Math magicians
 
-> This is Leaderboard project.
+> This is Math magicians project.
 
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
-- WebPack
+- React
 
 ## Live Demo
 
