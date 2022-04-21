@@ -16,9 +16,9 @@ export default function Calculator() {
     setResult(0);
   }, []);
 
-  componentDidUpdate() {
-    console.log('new data is', this.state);
-  }
+  useEffect(() => {
+    console.log('new data is', [total, next, operation, result]);
+  });
 
   calculateNewData = (event) => {
     const newData = calculate(
