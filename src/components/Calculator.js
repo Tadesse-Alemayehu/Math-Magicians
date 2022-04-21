@@ -4,8 +4,6 @@ import Button from './button';
 import calculate from '../logic/calculate';
 
 export default class Calculator extends PureComponent {
-  buttonName = null;
-
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +15,6 @@ export default class Calculator extends PureComponent {
   }
 
   componentDidMount() {
-    console.log('component is mounted');
     this.setState(() => ({
       total: 0,
       next: 0,
