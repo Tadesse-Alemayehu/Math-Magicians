@@ -67,7 +67,11 @@ export default function Calculator() {
 
   const updateOperator = (event) => {
     const newData = calculate(
-      this.state,
+      {
+        total,
+        next,
+        operation,
+      },
       event.target.textContent,
     );
     setTotal(newData.total);
