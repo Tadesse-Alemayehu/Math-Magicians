@@ -33,7 +33,6 @@ export default function Calculator() {
     setNext(newData.next || 0);
     setOperation(newData.operation || '');
     setResult(newData.total || newData.next || 0);
-
   };
 
   const updateNextNumber = (event) => {
@@ -43,7 +42,6 @@ export default function Calculator() {
       ? event.target.textContent : next + event.target.textContent;
     setNext(nextNumber);
     setResult(newResult);
-
   };
 
   const updateOperator = (event) => {
