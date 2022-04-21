@@ -1,13 +1,13 @@
-# Leaderboard
+# Math magicians
 
-> This is Leaderboard project.
+> This is Math magicians project.
 
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
-- WebPack
+- React
 
 ## Live Demo
 
@@ -35,6 +35,8 @@
 
 Give a ⭐️ if you like this project!
 
+## Submit an issue
+[Issue page](https://github.com/Tadesse-Alemayehu/Math-Magicians/issues)
 ## Acknowledgments
 
 - Microverse for amusing learning resources.
@@ -43,4 +45,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-Coming soon.
+LICENCED UNDER [MIT License](LICENSE)
