@@ -2,9 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Button extends PureComponent {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     const { value, className, clickCallback } = this.props;
     return (
