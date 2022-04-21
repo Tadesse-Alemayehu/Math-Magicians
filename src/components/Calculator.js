@@ -9,58 +9,54 @@ export default class Calculator extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      total: 0,
-      next: 0,
-      operation: '',
+      total: null,
+      next: null,
+      operation: null,
+      result: null,
     };
   }
 
   componentDidMount() {
     console.log('component is mounted');
-    this.buttonName = 'AC';
+    this.setState(() => ({
+      total: 0,
+      next: 0,
+      operation: '',
+      result: 0,
+    }));
   }
 
   componentDidUpdate() {
     console.log('new data is', this.state);
   }
-  /**
- * Given a button name and a calculator data object, return an updated
- * calculator data object.
- *
- * Calculator data object contains:
- *   total:s      the running total
- *   next:String       the next number to be operated on with the total
- *   operation:String  +, -, etc.
- */
 
   calculateNewData = (event) => {
-    // console.log(event.target.textContent);
     const newData = calculate(
       this.state,
       event.target.textContent,
     );
-    // console.log(this.state);
     this.setState(() => ({
       total: newData.total || 0,
       next: newData.next || 0,
       operation: newData.operation || '',
+      result: newData.total || newData.next || 0,
     }));
-    // console.log('new state is', this.state);
-    // call the calculator method with this.state and button
   }
 
   updateNextNumber = (event) => {
-    this.setState((state) => ({
-      total: state.total,
-      next: state.next + event.target.textContent,
-      operation: state.operation,
-    }));
-
-    // console.log('new state is', this.state);
+    this.setState((state) => {
+      const result = state.result === 0
+        ? event.target.textContent : state.result + event.target.textContent;
+      return {
+        total: state.total,
+        next: state.next + event.target.textContent,
+        operation: state.operation,
+        result,
+      };
+    });
   }
 
   updateOperator = (event) => {
-    // console.log(event.target);
     const newData = calculate(
       this.state,
       event.target.textContent,
@@ -69,16 +65,16 @@ export default class Calculator extends PureComponent {
       total: newData.total,
       next: 0,
       operation: event.target.textContent,
+      result: newData.total + event.target.textContent,
     }));
-    console.log('new state is', this.state);
   }
 
   render() {
-    const { total } = this.state;
+    const { result } = this.state;
     return (
       <div id="Calculator">
         <div id="result">
-          <input type="text" name="result" id="result" value={total} />
+          <input type="text" name="result" id="result" value={result} />
         </div>
         <div id="leftSide">
           <Button value="AC" buttonName="AC" clickCallback={this.calculateNewData} />
