@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.css';
 import Button from './button';
 import calculate from '../logic/calculate';
@@ -8,24 +8,13 @@ export default function Calculator() {
   const [next, setNext] = useState(null)
   const [operation, setOperation] = useState(null)
   const [result, setResult] = useState(null)
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     total: null,
-  //     next: null,
-  //     operation: null,
-  //     result: null,
-  //   };
-  // }
 
-  componentDidMount() {
-    this.setState(() => ({
-      total: 0,
-      next: 0,
-      operation: '',
-      result: 0,
-    }));
-  }
+  useEffect(() => {
+    setTotal(0);
+    setNext(0);
+    setOperation('');
+    setResult(0);
+  }, []);
 
   componentDidUpdate() {
     console.log('new data is', this.state);
