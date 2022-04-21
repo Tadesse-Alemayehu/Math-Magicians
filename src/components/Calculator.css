@@ -46,14 +46,14 @@
   background-color: var(--orange);
 }
 
-span {
+button {
   padding: 1vw 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#rightSide span {
+#rightSide button {
   padding: 1vw 5vw;
 }
 

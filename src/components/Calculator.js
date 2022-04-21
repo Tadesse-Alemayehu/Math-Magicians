@@ -24,7 +24,7 @@ export default class Calculator extends PureComponent {
  */
   calculateNewData = () => {
     console.log('button clicked');
-    console.log(this.state);
+    // console.log(this.state);
     // call the calculator method with this.state and button
   }
 
@@ -46,27 +46,27 @@ export default class Calculator extends PureComponent {
           <input type="text" name="result" id="result" value={total} />
         </div>
         <div id="leftSide">
-          <Button name="AC" buttonName="AC" clickCallback={this.calculateNewData} />
-          <Button name="+/-" buttonName="+/-" />
-          <Button name="%" buttonName="%" />
-          <Button name="1" />
-          <Button name="2" />
-          <Button name="3" />
-          <Button name="4" />
-          <Button name="5" />
-          <Button name="6" />
-          <Button name="7" />
-          <Button name="8" />
-          <Button name="9" />
-          <Button name="0" className="zero" />
-          <Button name="." />
+          <Button value="AC" buttonName="AC" clickCallback={this.calculateNewData} />
+          <Button value="+/-" buttonName="+/-" clickCallback={this.calculateNewData} />
+          <Button value="%" buttonName="%" clickCallback={this.calculateNewData} />
+          <Button value="1" clickCallback={this.updateNextNumber} />
+          <Button value="2" clickCallback={this.updateNextNumber} />
+          <Button value="3" clickCallback={this.updateNextNumber} />
+          <Button value="4" clickCallback={this.updateNextNumber} />
+          <Button value="5" clickCallback={this.updateNextNumber} />
+          <Button value="6" clickCallback={this.updateNextNumber} />
+          <Button value="7" clickCallback={this.updateNextNumber} />
+          <Button value="8" clickCallback={this.updateNextNumber} />
+          <Button value="9" clickCallback={this.updateNextNumber} />
+          <Button value="0" className="zero" clickCallback={this.updateNextNumber} />
+          <Button value="." clickCallback={this.updateNextNumber} />
         </div>
         <div id="rightSide">
-          <Button className="divide operator" buttonName="÷" />
-          <Button className="multiply operator" buttonName="x" />
-          <Button className="minus operator" buttonName="-" />
-          <Button className="plus operator" buttonName="+" />
-          <Button className="equal operator" buttonName="=" />
+          <Button className="divide operator" buttonName="÷" clickCallback={this.calculateNewData} />
+          <Button className="multiply operator" buttonName="x" clickCallback={this.calculateNewData} />
+          <Button className="minus operator" buttonName="-" clickCallback={this.calculateNewData} />
+          <Button className="plus operator" buttonName="+" clickCallback={this.calculateNewData} />
+          <Button className="equal operator" buttonName="=" clickCallback={this.calculateNewData} />
         </div>
       </div>
     );

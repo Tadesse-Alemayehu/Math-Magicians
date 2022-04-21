@@ -6,15 +6,15 @@ export default class Button extends PureComponent {
   //   super(props);
   // }
   render() {
-    const { name, className, clickCallback } = this.props;
+    const { value, className, clickCallback } = this.props;
     return (
-      <button type="submit" className={className} onClick={clickCallback}>{name}</button>
+      <button type="submit" className={className} onClick={clickCallback}>{value}</button>
     );
   }
 }
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   clickCallback: PropTypes.func.isRequired,
 };
