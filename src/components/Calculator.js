@@ -42,19 +42,28 @@ export default function Calculator() {
     // }));
   }
 
-  updateNextNumber = (event) => {
-    this.setState((state) => {
-      const result = state.result === 0
-        ? event.target.textContent : state.result + event.target.textContent;
-      const nextNumber = state.next === 0
-        ? event.target.textContent : state.next + event.target.textContent;
-      return {
-        total: state.total,
-        next: nextNumber,
-        operation: state.operation,
-        result,
-      };
-    });
+  const updateNextNumber = (event) => {
+
+    const newResult = state.result === 0
+      ? event.target.textContent : state.result + event.target.textContent;
+    const nextNumber = state.next === 0
+      ? event.target.textContent : state.next + event.target.textContent;
+    // setTotal(newData.total || 0);
+    setNext(nextNumber);
+    // setOperation(newData.operation || '');
+    setResult(newResult);
+    // this.setState((state) => {
+    //   const result = state.result === 0
+    //     ? event.target.textContent : state.result + event.target.textContent;
+    //   const nextNumber = state.next === 0
+    //     ? event.target.textContent : state.next + event.target.textContent;
+    //   return {
+    //     total: state.total,
+    //     next: nextNumber,
+    //     operation: state.operation,
+    //     result,
+    //   };
+    // });
   }
 
   updateOperator = (event) => {
