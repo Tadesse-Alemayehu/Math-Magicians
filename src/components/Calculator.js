@@ -54,9 +54,13 @@ export default class Calculator extends PureComponent {
 
   updateOperator = (event) => {
     // console.log(event.target);
-    this.setState((state) => ({
-      total: state.total,
-      next: state.next,
+    const newData = calculate(
+      this.state,
+      event.target.textContent,
+    );
+    this.setState(() => ({
+      total: newData.total,
+      next: 0,
       operation: event.target.textContent,
     }));
     console.log('new state is', this.state);
