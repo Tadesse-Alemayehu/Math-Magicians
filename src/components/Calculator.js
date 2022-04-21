@@ -20,17 +20,26 @@ export default function Calculator() {
     console.log('new data is', [total, next, operation, result]);
   });
 
-  calculateNewData = (event) => {
+  const calculateNewData = (event) => {
     const newData = calculate(
-      this.state,
+      {
+        total,
+        next,
+        operation,
+      },
       event.target.textContent,
     );
-    this.setState(() => ({
-      total: newData.total || 0,
-      next: newData.next || 0,
-      operation: newData.operation || '',
-      result: newData.total || newData.next || 0,
-    }));
+    setTotal(newData.total || 0);
+    setNext(newData.next || 0);
+    setOperation(newData.operation || '');
+    setResult(newData.total || newData.next || 0);
+
+    // this.setState(() => ({
+    //   total: newData.total || 0,
+    //   next: newData.next || 0,
+    //   operation: newData.operation || '',
+    //   result: newData.total || newData.next || 0,
+    // }));
   }
 
   updateNextNumber = (event) => {
