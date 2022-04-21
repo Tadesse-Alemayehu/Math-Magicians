@@ -6,9 +6,9 @@ export default class Button extends PureComponent {
   //   super(props);
   // }
   render() {
-    const { name, className } = this.props;
+    const { name, className, clickCallback } = this.props;
     return (
-      <span className={className}>{name}</span>
+      <button type="submit" className={className} onClick={clickCallback}>{name}</button>
     );
   }
 }
@@ -16,4 +16,5 @@ export default class Button extends PureComponent {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
+  clickCallback: PropTypes.func.isRequired,
 };

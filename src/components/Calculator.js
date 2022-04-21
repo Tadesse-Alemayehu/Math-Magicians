@@ -46,7 +46,7 @@ export default class Calculator extends PureComponent {
           <input type="text" name="result" id="result" value={total} />
         </div>
         <div id="leftSide">
-          <Button name="AC" buttonName="AC" />
+          <Button name="AC" buttonName="AC" clickCallback={this.calculateNewData} />
           <Button name="+/-" buttonName="+/-" />
           <Button name="%" buttonName="%" />
           <Button name="1" />
