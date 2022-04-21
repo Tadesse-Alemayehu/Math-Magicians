@@ -35,6 +35,8 @@
 
 Give a ⭐️ if you like this project!
 
+## Submit an issue
+[Issue page](https://github.com/Tadesse-Alemayehu/Math-Magicians/issues)
 ## Acknowledgments
 
 - Microverse for amusing learning resources.
