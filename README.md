@@ -9,6 +9,12 @@
 - JavaScript
 - React
 
+
+## screenshot 
+
+![Capture](https://user-images.githubusercontent.com/69077061/164534191-ecd8457f-c53c-4263-9b9b-a297d004b542.PNG)
+
+
 ## Live Demo
 
 [Coming soon]() 🙂
