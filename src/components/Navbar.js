@@ -6,7 +6,7 @@ export default function Navbar() {
   const navbarStyle = {
     display: 'inline-flex',
     float: 'right',
-    marginRight: '5vw',
+    marginLeft: '5vw',
   };
   const ulStyle = {
     listStyle: 'none',

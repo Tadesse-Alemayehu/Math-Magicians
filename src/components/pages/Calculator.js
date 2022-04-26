@@ -44,7 +44,7 @@ export default function Calculator() {
   return (
     <div id="container">
       <div id="textContent">
-        <h1>Math Magicians</h1>
+        <h1 className="mainHeading">Math Magicians</h1>
         <h2>Let&apos;s do some math!</h2>
       </div>
       <div id="Calculator">

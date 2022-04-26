@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div>
+    <div id="footer-container">
       <h1>
         Math Magician projectilesBy,
-        Tadesse Alemayehu.
       </h1>
+      <h2>Tadesse Alemayehu.</h2>
     </div>
   );
 }

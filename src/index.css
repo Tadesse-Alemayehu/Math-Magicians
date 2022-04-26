@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 html,
 body {
-  background-color: red;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono',
+  monospace;
+}
+
+#main-container{
+  margin: 2vw;
+}
+
+#HomeContainer p{
+margin: 5vw;
+}#footer-container{
+  position: fixed;
+  bottom: 0;
+}
+
+.quote-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }

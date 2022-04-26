@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Math Magicians</h1>
+    <div id="HomeContainer">
+      <h1 className="mainHeading">Math Magicians</h1>
       <h2>Welcome to our page</h2>
       <article>
         <p>
