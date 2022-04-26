@@ -3,15 +3,13 @@
   --light: #e9e8e8;
   --dark: #858693;
 
-  max-width: max-content;
+  width: 60vw;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: 'result result';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 400;
+  height: 40vw;
+  margin-left: auto;
 }
 
 #result {
