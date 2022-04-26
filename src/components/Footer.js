@@ -3,10 +3,10 @@ import React from 'react';
 export default function Footer() {
   return (
     <div id="footer-container">
-      <h1>
-        Math Magician projectilesBy,
-      </h1>
-      <h2>Tadesse Alemayehu.</h2>
+      <h2>
+        Math Magician project
+      </h2>
+      <h3>By, Tadesse Alemayehu.</h3>
     </div>
   );
 }
