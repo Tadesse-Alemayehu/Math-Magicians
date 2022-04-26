@@ -43,6 +43,10 @@ export default function Calculator() {
 
   return (
     <div id="container">
+      <div id="textContent">
+        <h1>Math Magicians</h1>
+        <h2>Let&apos;s do some math!</h2>
+      </div>
       <div id="Calculator">
         <div id="result">
           <input type="text" name="result" id="result" value={result} />
