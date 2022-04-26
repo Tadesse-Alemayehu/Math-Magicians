@@ -6,6 +6,8 @@ export default function Navbar() {
   return (
     <ul>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/Calculator">Calculator</NavLink>
+      <NavLink to="/Quote">Quotes</NavLink>
     </ul>
   );
 }
