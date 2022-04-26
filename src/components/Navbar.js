@@ -3,11 +3,38 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   // [{ name: Home, link: '/' }];
+  const navbarStyle = {
+    display: 'inline-flex',
+    float: 'right',
+    marginRight: '5vw',
+  };
+  const ulStyle = {
+    listStyle: 'none',
+    display: 'flex',
+    fontSize: '1.2rem',
+  };
+  const anchorStyle = {
+    textDecoration: 'none',
+    color: 'blue',
+    margin: '2vw',
+  };
+  const liStyle = {
+    borderRight: '1px solid black',
+    borderLeft: '1px solid black',
+  };
   return (
-    <ul>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/Calculator">Calculator</NavLink>
-      <NavLink to="/Quote">Quotes</NavLink>
-    </ul>
+    <nav style={navbarStyle}>
+      <ul style={ulStyle}>
+        <li>
+          <NavLink to="/" style={anchorStyle}>Home</NavLink>
+        </li>
+        <li style={liStyle}>
+          <NavLink to="/Calculator" style={anchorStyle}>Calculator</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Quote" style={anchorStyle}>Quotes</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }
