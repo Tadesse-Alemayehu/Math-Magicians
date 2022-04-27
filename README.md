@@ -35,6 +35,13 @@
 - Twitter: [@twitterhandle](https://twitter.com/TadesseWebDev)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tadesse-alemayehu-60141a221/)
 
+## Collaborators
+
+👤 **Augusto Galindo**
+
+- GitHub: [@jsug9](https://github.com/jsug9)
+- LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
