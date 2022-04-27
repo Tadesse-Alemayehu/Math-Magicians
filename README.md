@@ -15,9 +15,9 @@
 
 ## Live Demo
 
-[Go Live - gh-pages](https://tadesse-alemayehu.github.io/Math-Magicians/) 🙂
-[Go Live - HEROKU](https://tadess-math-magician.herokuapp.com/) 🙂
-[Go Live - Netlify](https://tadesse-math-magician.netlify.app/) 🙂
+#### [GIHUB-PAGE](https://tadesse-alemayehu.github.io/Math-Magicians/) 🙂
+#### [HEROKU](https://tadess-math-magician.herokuapp.com/) 🙂
+#### [Netlify](https://tadesse-math-magician.netlify.app/) 🙂
 
 ## Getting Started
 
