@@ -1,4 +1,4 @@
-import calculate from './../../logic/calculate';
+import calculate from '../../logic/calculate';
 
 const passingObject = { total: '1', next: '2', operation: '+' };
 test('test calculator for the buttons functionality', () => {

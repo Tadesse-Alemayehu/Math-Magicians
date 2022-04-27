@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import Button from './../../logic/button';
+import Button from '../../logic/button';
 
 it('render button', () => {
   const button = renderer

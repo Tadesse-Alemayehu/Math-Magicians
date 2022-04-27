@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Make sure the Navbar renders the same 1`] = `
+<div
+  id="footer-container"
+>
+  <h2>
+    Math Magician project
+  </h2>
+  <h3>
+    By, Tadesse Alemayehu.
+  </h3>
+</div>
+`;
