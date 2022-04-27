@@ -19,4 +19,6 @@ test('test operators for the right return', () => {
     .toBe('2');
   expect(calculate({ ...passingObject, operation: '÷' }, '=').total)
     .toBe('0.5');
+  expect(calculate({ ...passingObject, operation: '%' }, '=').total)
+    .toBe('1');
 });
