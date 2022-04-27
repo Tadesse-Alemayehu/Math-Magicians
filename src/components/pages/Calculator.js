@@ -17,11 +17,13 @@ export default function Calculator() {
   }, []);
 
   const calculateNewData = (event) => {
+    console.log({ total, next, operation }, event.target.textContent);
     const newData = calculate({ total, next, operation }, event.target.textContent);
     setTotal(newData.total || 0);
     setNext(newData.next || 0);
     setOperation(newData.operation || '');
     setResult(newData.total || newData.next || 0);
+    console.log(newData);
   };
 
   const updateNextNumber = (event) => {
@@ -40,7 +42,8 @@ export default function Calculator() {
     setOperation(event.target.textContent);
     setResult((newData.total || '0') + event.target.textContent);
   };
-
+  useEffect(() => {
+  });
   return (
     <div id="container">
       <div id="textContent">
