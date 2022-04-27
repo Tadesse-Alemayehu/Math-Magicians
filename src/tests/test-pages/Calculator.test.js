@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import Calculator from '../../components/pages/Calculator';
 
-it('renders correctly', () => {
+it('Calculator matches snapshot', () => {
   const tree = renderer
     .create(<Calculator />)
     .toJSON();
