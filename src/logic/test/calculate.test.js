@@ -1,4 +1,4 @@
-import calculate from '../calculate'
+import calculate from '../calculate';
 
 const passingObject = { total: '1', next: '2', operation: '+' };
 test('test calculator for the buttons functionality', () => {
@@ -17,6 +17,6 @@ test('test operators for the right return', () => {
     .toBe('-1');
   expect(calculate({ ...passingObject, operation: 'x' }, '=').total)
     .toBe('2');
-  expect(calculate({ ...passingObject, operation: "÷" }, '=').total)
+  expect(calculate({ ...passingObject, operation: '÷' }, '=').total)
     .toBe('0.5');
 });
