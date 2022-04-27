@@ -22,3 +22,29 @@ test('test operators for the right return', () => {
   expect(calculate({ ...passingObject, operation: '%' }, '=').total)
     .toBe('1');
 });
+
+describe('Make multiple calculations', () => {
+  let obj = {
+    total: null,
+    next: null,
+    operation: null,
+  };
+
+  test('Test multiple operations', () => {
+    const buttons = ['2', '+', '2', 'x', '6', '÷', '3', '='];
+    buttons.forEach((button) => {
+      obj = { ...obj, ...calculate(obj, button) };
+    });
+    const { total } = obj;
+    expect(total).toEqual('8');
+  });
+
+  test('Test multiple operations with two digits numbers', () => {
+    const buttons = ['2', '0', '+', '1', '0', '÷', '3', '='];
+    buttons.forEach((button) => {
+      obj = { ...obj, ...calculate(obj, button) };
+    });
+    const { total } = obj;
+    expect(total).toEqual('10');
+  });
+});
