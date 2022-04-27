@@ -1,4 +1,4 @@
-import operator from './../logic/operate'
+import operator from '../operate'
 
 const passingObject = { total: '1', next: '2', operation: '+' };
 test('test operator function for right calculation', () => {
